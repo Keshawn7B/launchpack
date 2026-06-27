@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LaunchPack — turn an idea into a real launch plan</title>
+  <meta name="description" content="A free interactive launch planner that turns any app, game, tool, or portfolio idea into a practical MVP scope, viral hook, ship plan, and copy kit." />
+  <meta name="theme-color" content="#f5f1e8" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LaunchPack" />
+  <meta property="og:description" content="Turn any project idea into an MVP, launch plan, and shareable copy kit in minutes." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="LaunchPack home"><span></span>LaunchPack</a>
+    <nav aria-label="Primary">
+      <a href="#builder">Builder</a>
+      <a href="#playbooks">Playbooks</a>
+      <a href="#export">Export</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker">Free useful tool • no account • works offline after load</p>
+        <h1>Turn a rough idea into a launchable project.</h1>
+        <p class="lede">LaunchPack creates an MVP scope, attention hook, build roadmap, landing-page copy, and launch checklist from one sentence. Built for indie hackers, students, creators, and anyone trying to ship instead of overthink.</p>
+        <div class="actions">
+          <a class="btn primary" href="#builder">Build my LaunchPack</a>
+          <button class="btn" id="demoBtn" type="button">Load strong example</button>
+        </div>
+      </div>
+      <aside class="scorecard" aria-label="Launch readiness score">
+        <div class="ring" id="scoreRing"><strong id="scoreValue">0</strong><span>/100</span></div>
+        <h2>Launch readiness</h2>
+        <p id="scoreText">Complete the builder to generate a practical score and next move.</p>
+        <div class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </aside>
+    </section>
+
+    <section class="builder shell" id="builder" aria-labelledby="builder-title">
+      <div class="section-head">
+        <p class="kicker">Interactive builder</p>
+        <h2 id="builder-title">Answer five things. Get a plan.</h2>
+      </div>
+      <div class="builder-grid">
+        <form class="form-card" id="launchForm">
+          <label><span>Project idea</span><textarea id="idea" rows="4" maxlength="220" placeholder="Example: A Roblox combat trainer that helps beginners practice timing, dodges, and combos."></textarea></label>
+          <div class="two"><label><span>Audience</span><input id="audience" placeholder="Example: beginner Roblox fighters" /></label><label><span>Project type</span><select id="type"><option>app/tool</option><option>game</option><option>portfolio</option><option>content series</option><option>community</option></select></label></div>
+          <div class="two"><label><span>Time available</span><select id="time"><option value="weekend">weekend</option><option value="7 days">7 days</option><option value="14 days">14 days</option><option value="30 days">30 days</option></select></label><label><span>Main goal</span><select id="goal"><option>get attention</option><option>learn/build skill</option><option>make money</option><option>help people</option><option>portfolio proof</option></select></label></div>
+          <label><span>Big constraint</span><input id="constraint" placeholder="Example: zero budget, solo dev, no backend, limited time" /></label>
+          <button class="btn primary full" type="submit">Generate LaunchPack</button>
+        </form>
+        <div class="output-card" id="pack" aria-live="polite">
+          <div class="empty"><strong>Your LaunchPack appears here.</strong><p>It will include MVP, hook, roadmap, copy, launch checklist, and next action.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="playbooks shell" id="playbooks" aria-labelledby="playbooks-title">
+      <div class="section-head narrow"><p class="kicker">Attention with purpose</p><h2 id="playbooks-title">Built-in launch playbooks</h2><p>Pick a proven angle after generating your pack. The tool adapts the copy and checklist to match.</p></div>
+      <div class="cards" id="playbookCards">
+        <button class="playbook active" data-playbook="challenge"><strong>Public Challenge</strong><span>Turn the build into a visible countdown.</span></button>
+        <button class="playbook" data-playbook="beforeafter"><strong>Before / After</strong><span>Show transformation fast.</span></button>
+        <button class="playbook" data-playbook="freeutility"><strong>Free Utility</strong><span>Give people something useful immediately.</span></button>
+        <button class="playbook" data-playbook="story"><strong>Origin Story</strong><span>Make the reason memorable.</span></button>
+      </div>
+    </section>
+
+    <section class="export shell" id="export" aria-labelledby="export-title">
+      <div><p class="kicker">Export kit</p><h2 id="export-title">Copy it, save it, ship it.</h2><p>The generated plan is stored locally in your browser. No tracking, no server, no account.</p></div>
+      <div class="export-actions"><button class="btn primary" id="copyBtn" type="button">Copy LaunchPack</button><button class="btn" id="downloadBtn" type="button">Download Markdown</button><button class="btn danger" id="clearBtn" type="button">Reset</button></div>
+    </section>
+  </main>
+
+  <footer class="shell footer"><p>LaunchPack is a static, client-side planning tool. Best used to decide what to build this week.</p><a href="#top">Back to top</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
