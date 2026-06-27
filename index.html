@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LaunchPack — turn an idea into a real launch plan</title>
-  <meta name="description" content="A free interactive launch planner that turns any app, game, tool, or portfolio idea into a practical MVP scope, viral hook, ship plan, and copy kit." />
+  <title>LaunchPack — AI Promoter Prompt Builder</title>
+  <meta name="description" content="Turn any project, product, game, app, song, or service into a model-ready AI promotion prompt kit for ChatGPT, Gemini, Claude, Grok, Copilot, and any other AI model." />
   <meta name="theme-color" content="#f5f1e8" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LaunchPack" />
-  <meta property="og:description" content="Turn any project idea into an MVP, launch plan, and shareable copy kit in minutes." />
+  <meta property="og:title" content="LaunchPack — AI Promoter Prompt Builder" />
+  <meta property="og:description" content="Generate universal AI prompts that make any model act like a sharp promo strategist for your project." />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
-  <link rel="stylesheet" href="styles.css?v=4935b6f" />
+  <link rel="stylesheet" href="styles.css?v=ai-promoter-1" />
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="LaunchPack home"><span></span>LaunchPack</a>
     <nav aria-label="Primary">
-      <a href="#builder">Builder</a>
-      <a href="#playbooks">Playbooks</a>
+      <a href="#builder">Prompt Builder</a>
+      <a href="#stack">Prompt Stack</a>
       <a href="#export">Export</a>
     </nav>
   </header>
@@ -27,58 +27,64 @@
   <main id="top">
     <section class="hero shell">
       <div class="hero-copy">
-        <p class="kicker">Free useful tool • no account • works offline after load</p>
-        <h1>Turn a rough idea into a launchable project.</h1>
-        <p class="lede">LaunchPack creates an MVP scope, attention hook, build roadmap, landing-page copy, and launch checklist from one sentence. Built for indie hackers, students, creators, and anyone trying to ship instead of overthink.</p>
+        <p class="kicker">AI promoter • universal prompt kit • no API required</p>
+        <h1>Make any AI model sell the value of what you built.</h1>
+        <p class="lede">LaunchPack now turns your rough project into a copy-paste prompt system for ChatGPT, Gemini, Claude, Grok, Copilot, local models, or whatever AI you use. It gives the model the role, context, constraints, scoring rubric, platform goals, and output format it needs to create stronger promotion.</p>
         <div class="actions">
-          <a class="btn primary" href="#builder">Build my LaunchPack</a>
+          <a class="btn primary" href="#builder">Build my AI promoter prompt</a>
           <button class="btn" id="demoBtn" type="button">Load strong example</button>
         </div>
+        <div class="trust-row" aria-label="Benefits">
+          <span>No exposed API keys</span><span>Works offline after load</span><span>Prompts any model</span>
+        </div>
       </div>
-      <aside class="scorecard" aria-label="Launch readiness score">
+      <aside class="scorecard" aria-label="Prompt strength score">
         <div class="ring" id="scoreRing"><strong id="scoreValue">0</strong><span>/100</span></div>
-        <h2>Launch readiness</h2>
-        <p id="scoreText">Complete the builder to generate a practical score and next move.</p>
+        <h2>Prompt strength</h2>
+        <p id="scoreText">Complete the builder to generate a model-ready prompt system and promotion kit.</p>
         <div class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       </aside>
     </section>
 
     <section class="builder shell" id="builder" aria-labelledby="builder-title">
       <div class="section-head">
-        <p class="kicker">Interactive builder</p>
-        <h2 id="builder-title">Answer five things. Get a plan.</h2>
+        <p class="kicker">Prompt builder</p>
+        <h2 id="builder-title">Give the AI better context. Get better promotion.</h2>
+        <p>Most AI promo fails because the prompt is vague. This builder packages your idea into a structured campaign brief with roles, angles, examples, limits, and deliverables.</p>
       </div>
       <div class="builder-grid">
         <form class="form-card" id="launchForm">
-          <label><span>Project idea</span><textarea id="idea" rows="4" maxlength="220" placeholder="Example: A Roblox combat trainer that helps beginners practice timing, dodges, and combos."></textarea></label>
-          <div class="two"><label><span>Audience</span><input id="audience" placeholder="Example: beginner Roblox fighters" /></label><label><span>Project type</span><select id="type"><option>app/tool</option><option>game</option><option>portfolio</option><option>content series</option><option>community</option></select></label></div>
-          <div class="two"><label><span>Time available</span><select id="time"><option value="weekend">weekend</option><option value="7 days">7 days</option><option value="14 days">14 days</option><option value="30 days">30 days</option></select></label><label><span>Main goal</span><select id="goal"><option>get attention</option><option>learn/build skill</option><option>make money</option><option>help people</option><option>portfolio proof</option></select></label></div>
-          <label><span>Big constraint</span><input id="constraint" placeholder="Example: zero budget, solo dev, no backend, limited time" /></label>
-          <button class="btn primary full" type="submit">Generate LaunchPack</button>
+          <label><span>What are you promoting?</span><textarea id="idea" rows="4" maxlength="360" placeholder="Example: A Roblox anime combat game with parries, dashes, training rooms, and boss fights for players who like skill-based action."></textarea></label>
+          <div class="two"><label><span>Target audience</span><input id="audience" placeholder="Example: Roblox players who like anime combat games" /></label><label><span>Offer type</span><select id="type"><option>game</option><option>app/tool</option><option>portfolio</option><option>music/song</option><option>service</option><option>community</option><option>content series</option></select></label></div>
+          <div class="two"><label><span>Main platform</span><select id="platform"><option>TikTok / Shorts</option><option>YouTube</option><option>X / Twitter</option><option>Reddit</option><option>Discord</option><option>Instagram</option><option>Landing page</option><option>All platforms</option></select></label><label><span>AI model style</span><select id="model"><option>Any model / universal</option><option>ChatGPT</option><option>Gemini</option><option>Claude</option><option>Grok</option><option>Local small model</option></select></label></div>
+          <div class="two"><label><span>Promotion goal</span><select id="goal"><option>get attention</option><option>get testers</option><option>grow followers</option><option>drive clicks</option><option>sell / convert</option><option>get feedback</option></select></label><label><span>Voice / vibe</span><select id="vibe"><option>clear and confident</option><option>bold and viral</option><option>funny and chaotic</option><option>premium and polished</option><option>friendly and helpful</option><option>mysterious and cinematic</option></select></label></div>
+          <label><span>Proof, constraint, or edge</span><input id="constraint" placeholder="Example: zero budget, solo dev, playable prototype, no paid ads, made in 7 days" /></label>
+          <label><span>What should the AI avoid?</span><input id="avoid" placeholder="Example: cringe hype, fake claims, overpromising, sounding corporate" /></label>
+          <button class="btn primary full" type="submit">Generate AI Promoter Kit</button>
         </form>
         <div class="output-card" id="pack" aria-live="polite">
-          <div class="empty"><strong>Your LaunchPack appears here.</strong><p>It will include MVP, hook, roadmap, copy, launch checklist, and next action.</p></div>
+          <div class="empty"><strong>Your AI Promoter Kit appears here.</strong><p>It will include a universal master prompt, platform prompt, critique prompt, output format, and copy-ready campaign angles.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="playbooks shell" id="playbooks" aria-labelledby="playbooks-title">
-      <div class="section-head narrow"><p class="kicker">Attention with purpose</p><h2 id="playbooks-title">Built-in launch playbooks</h2><p>Pick a proven angle after generating your pack. The tool adapts the copy and checklist to match.</p></div>
+    <section class="playbooks shell" id="stack" aria-labelledby="stack-title">
+      <div class="section-head narrow"><p class="kicker">Efficient model prompting</p><h2 id="stack-title">Choose the prompt stack</h2><p>Different tasks need different prompt pressure. Pick the stack, then paste the generated prompt into any model.</p></div>
       <div class="cards" id="playbookCards">
-        <button class="playbook active" data-playbook="challenge"><strong>Public Challenge</strong><span>Turn the build into a visible countdown.</span></button>
-        <button class="playbook" data-playbook="beforeafter"><strong>Before / After</strong><span>Show transformation fast.</span></button>
-        <button class="playbook" data-playbook="freeutility"><strong>Free Utility</strong><span>Give people something useful immediately.</span></button>
-        <button class="playbook" data-playbook="story"><strong>Origin Story</strong><span>Make the reason memorable.</span></button>
+        <button class="playbook active" data-playbook="campaign"><strong>Campaign Architect</strong><span>Complete promo strategy, hooks, calendar, and copy kit.</span></button>
+        <button class="playbook" data-playbook="hooks"><strong>Hook Smith</strong><span>High-volume scroll-stopping hooks and titles.</span></button>
+        <button class="playbook" data-playbook="critic"><strong>Brutal Critic</strong><span>Find weak positioning and rewrite it stronger.</span></button>
+        <button class="playbook" data-playbook="repurpose"><strong>Repurpose Engine</strong><span>Turn one idea into posts for every platform.</span></button>
       </div>
     </section>
 
     <section class="export shell" id="export" aria-labelledby="export-title">
-      <div><p class="kicker">Export kit</p><h2 id="export-title">Copy it, save it, ship it.</h2><p>The generated plan is stored locally in your browser. No tracking, no server, no account.</p></div>
-      <div class="export-actions"><button class="btn primary" id="copyBtn" type="button">Copy LaunchPack</button><button class="btn" id="downloadBtn" type="button">Download Markdown</button><button class="btn danger" id="clearBtn" type="button">Reset</button></div>
+      <div><p class="kicker">Export kit</p><h2 id="export-title">Copy the prompt. Paste it into any AI.</h2><p>This is not an API product yet. It is a safe prompt generator: no tokens, no server, no credit burn, no hidden model calls.</p></div>
+      <div class="export-actions"><button class="btn primary" id="copyBtn" type="button">Copy AI Promoter Prompt</button><button class="btn" id="downloadBtn" type="button">Download Markdown</button><button class="btn danger" id="clearBtn" type="button">Reset</button></div>
     </section>
   </main>
 
-  <footer class="shell footer"><p>LaunchPack is a static, client-side planning tool. Best used to decide what to build this week.</p><a href="#top">Back to top</a></footer>
-  <script src="script.js"></script>
+  <footer class="shell footer"><p>LaunchPack is a static, client-side AI promoter prompt builder. It helps you prompt any model more effectively without exposing API keys.</p><a href="#top">Back to top</a></footer>
+  <script src="script.js?v=ai-promoter-1"></script>
 </body>
 </html>

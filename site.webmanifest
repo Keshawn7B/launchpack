@@ -1,1 +1,1 @@
-{"name":"LaunchPack","short_name":"LaunchPack","start_url":"./","display":"standalone","background_color":"#f5f1e8","theme_color":"#f5f1e8","icons":[{"src":"favicon.svg","sizes":"any","type":"image/svg+xml"}]}
+{"name":"LaunchPack — AI Promoter Prompt Builder","short_name":"LaunchPack","description":"Generate model-ready AI promotion prompt kits for any project, product, app, game, song, service, or community.","start_url":"./","display":"standalone","background_color":"#f5f1e8","theme_color":"#f5f1e8","icons":[{"src":"favicon.svg","sizes":"any","type":"image/svg+xml"}]}
